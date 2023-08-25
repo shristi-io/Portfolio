@@ -11,12 +11,26 @@
     <title>shristi-io</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" type="image/x-icon" href="img/icons/favicon.ico" />
-    <script type="module" src="script.js"></script>
+    <script defer src="script.js"></script>
   </head>
   <body>
     <header class="header">
       <nav class="header__nav">
         <ul>
+          <div class="toggle__btn">
+            <div class="btn__indicator">
+              <div class="btn__icon-container">
+                <img
+                  class="btn__icon"
+                  src="./img/icons/sun.svg"
+                  alt=""
+                  height="30"
+                  width="30"
+                />
+              </div>
+            </div>
+          </div>
+
           <li>
             <a href="#skills"> Skills</a>
           </li>
@@ -25,9 +39,9 @@
         </ul>
       </nav>
       <div class="header__container">
-        <div class="header__title">
+        <div>
           <h1 class="center">
-            <p>
+            <p class="header__title">
               <span class="nowrap">Hi! I am Sibashis. </span>
               <br />
               <span class="nowrap">a frontend developer</span>
@@ -36,7 +50,8 @@
         </div>
         <figure>
           <img
-            src="./img/header.jpg"
+            class="header__image header__image--light-mode"
+            src="./img/agae4l01.svg"
             alt="Image of a girl sitting on computer"
             width="600"
             height="260"
@@ -62,11 +77,11 @@
       <section id="skills" class="main__section skills">
         <h2 class="center">Skills</h2>
         <ul class="skills__list">
-          <li class="skill">HTML</li>
-          <li class="skill">CSS</li>
-          <li class="skill">javascript ES6+</li>
-          <li class="skill">Tailwind</li>
-          <li class="skill">React js</li>
+          <li class="skill skill--light-mode">HTML</li>
+          <li class="skill skill--light-mode">CSS</li>
+          <li class="skill skill--light-mode">javascript ES6+</li>
+          <li class="skill skill--light-mode">Tailwind</li>
+          <li class="skill skill--light-mode">React js</li>
         </ul>
       </section>
 
@@ -124,9 +139,10 @@
           <li>
             <a target="_blank" href="https://github.com/shristi-io"
               ><img
+                class="github__logo"
                 width="40"
                 height="40"
-                src="./img/github__light-mode.png"
+                src="./img/github.svg"
                 alt="github logo"
             /></a>
           </li>

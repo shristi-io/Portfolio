@@ -1,6 +1,14 @@
 "use strict";
 
+const htmlElement = document.querySelector("html");
+const bodyElement = document.querySelector("body");
 const projectContainer = document.querySelector(".projects__list");
+const toggleButton = document.querySelector(".toggle__btn");
+const toggleButtonIcon = document.querySelector(".btn__icon");
+const headerImage = document.querySelector(".header__image");
+const navBar = document.querySelector(".header__nav");
+const skills = document.querySelectorAll(".skill");
+const headerTitle = document.querySelector(".header__title");
 
 class Project {
   #sourceCode;
@@ -50,15 +58,15 @@ const addProject = function (project) {
                 <a
                   target="_blank"
                   href="${project.source}"
-                  ><img
-                    src="./img/github__light-mode.png"
+                  ><img class="github__logo"
+                    src="./img/github.svg"
                     alt="github logo"
                     width="45"
                     height="45"
-                  />Code</a
+                  /></a
                 >
                 <a target="_blank" href="${project.site}"
-                  >&#60;&#47;&#62; Site</a
+                  >&#60;&#47;&#62; </a
                 >
               </span>
             </li>
@@ -67,6 +75,7 @@ const addProject = function (project) {
   projectContainer.insertAdjacentHTML("beforeend", html);
 };
 
+// /////////////////////////////////////////////////////////////////
 // Creating projects
 
 const forkify = new Project(
@@ -150,3 +159,43 @@ const projects = [
 // Rendering the projects on the display
 
 projects.forEach((proj) => addProject(proj));
+
+// Selecting the projects from DOM
+
+const projectElements = document.querySelectorAll(".project");
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+// Icons
+
+const githubLogos = document.querySelectorAll(".github__logo");
+
+// Adding light and dark mode
+
+const toggleMode = function () {
+  toggleButton.classList.toggle("toggle__btn--dark");
+  if (toggleButton.classList.contains("toggle__btn--dark")) {
+    toggleButtonIcon.setAttribute("src", "./img/icons/moon.svg");
+  } else {
+    toggleButtonIcon.setAttribute("src", "./img/icons/sun.svg");
+  }
+
+  headerImage.classList.toggle("header__image--light-mode");
+  headerImage.classList.toggle("header__image--dark-mode");
+  headerTitle.classList.toggle("header__title--dark-mode");
+  htmlElement.classList.toggle("dark__mode");
+  // bodyElement.classList.toggle("dark__mode");
+  navBar.classList.toggle("dark__mode");
+  skills.forEach((skill) => {
+    skill.classList.toggle("skill--light-mode");
+    skill.classList.toggle("skill--dark-mode");
+  });
+  projectElements.forEach((project) => {
+    project.classList.toggle("dark__mode");
+  });
+  githubLogos.forEach((logo) => {
+    logo.classList.toggle("github__logo--dark-mode");
+  });
+};
+
+toggleButton.addEventListener("click", toggleMode);
