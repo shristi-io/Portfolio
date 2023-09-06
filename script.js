@@ -126,35 +126,30 @@ notepedia.setDescription(
 
 notepedia.setImage("./img/projects/notepedia.png");
 
-const registrationForm = new Project(
-  "Registration Form",
-  "https://github.com/shristi-io/Registration-form",
-  "https://shristi-io.github.io/Registration-form/"
+const nikeClone = new Project(
+  "Nike Clone",
+  "https://github.com/shristi-io/nike-clone",
+  "https://shristi-io-nike-clone.netlify.app/"
 );
 
-registrationForm.setDescription(
-  "A responsive registration form design. The example interface is taken for a gym membership"
+nikeClone.setDescription(
+  "A responsive clone website of Nike created using React and Tailwind CSS. It is mobile friendly."
 );
-registrationForm.setImage("./img/projects/registration.png");
+nikeClone.setImage("./img/projects/nike.png");
 
-const surveyForm = new Project(
-  "Survey Form",
-  "https://github.com/shristi-io/Survey-Form",
-  "https://shristi-io.github.io/Survey-Form/"
+const cardGame = new Project(
+  "Card Game",
+  "https://github.com/shristi-io/bizarre-card-game",
+  "https://bizarre-card-game.netlify.app/"
 );
 
-surveyForm.setDescription("Survey form template using only HTML and CSS");
+cardGame.setDescription(
+  "A memory card game based on the anime seried JoJo's Bizarre Adventures by Hirohiko Araki. Created with React and Tailwind."
+);
 
-surveyForm.setImage("./img/projects/survey.png");
+cardGame.setImage("./img/projects/jojo.png");
 
-const projects = [
-  forkify,
-  mapty,
-  bank,
-  notepedia,
-  registrationForm,
-  surveyForm,
-];
+const projects = [forkify, mapty, bank, notepedia, nikeClone, cardGame];
 
 // Rendering the projects on the display
 
