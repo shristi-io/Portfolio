@@ -114,6 +114,18 @@ bank.setDescription(
 
 bank.setImage("./img/projects/bank.png");
 
+const modernGpt = new Project(
+  "Modern GPT",
+  "https://github.com/shristi-io/modern-gpt",
+  "https://modern-gpt.netlify.app"
+);
+
+modernGpt.setDescription(
+  "A modern and responsive website design about GPT-4. It is created using React JS and Tailwind CSS."
+);
+
+modernGpt.setImage("./img//projects/modern_gpt.png");
+
 const notepedia = new Project(
   "Notepedia",
   "https://github.com/shristi-io/Note-Taking-Website",
@@ -149,7 +161,67 @@ cardGame.setDescription(
 
 cardGame.setImage("./img/projects/jojo.png");
 
-const projects = [forkify, mapty, bank, notepedia, nikeClone, cardGame];
+const registrationForm = new Project(
+  "Registration Form",
+  "https://github.com/shristi-io/Registration-form",
+  "https://shristi-io.github.io/Registration-form/"
+);
+
+registrationForm.setDescription(
+  "A responsive registration form design. The theme is for a gym membership. Created using only HTML and CSS."
+);
+
+registrationForm.setImage("./img/projects/registration.png");
+
+const library = new Project(
+  "Library System",
+  "https://github.com/shristi-io/College-Library-Website",
+  "https://shristi-io.github.io/College-Library-Website/"
+);
+
+library.setDescription(
+  "A minimalistic college library system where you can add and manage your records of books. Created using javascript."
+);
+
+library.setImage("./img/projects/library.png");
+
+const zomato = new Project(
+  "Zomato Clone",
+  "https://github.com/shristi-io/zomato-clone",
+  "https://shristi-io.github.io/zomato-clone/"
+);
+
+zomato.setDescription(
+  "Clone website design for Zomato using only HTML and CSS."
+);
+
+zomato.setImage("./img/projects/zomato.png");
+
+const surveyFrom = new Project(
+  "Survey Form",
+  "https://github.com/shristi-io/Survey-Form",
+  "https://shristi-io.github.io/Survey-Form/"
+);
+
+surveyFrom.setDescription(
+  "An interactive survey form design. It is mobile responsive. Created using only HTML and CSS."
+);
+
+surveyFrom.setImage("./img/projects/survey.png");
+
+const projects = [
+  forkify,
+  mapty,
+  bank,
+  modernGpt,
+  notepedia,
+  nikeClone,
+  cardGame,
+  registrationForm,
+  library,
+  zomato,
+  surveyFrom,
+];
 
 // Rendering the projects on the display
 
