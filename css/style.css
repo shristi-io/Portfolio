@@ -478,6 +478,20 @@ a:any-link {
   height: 30px;
 }
 
+CSS
+/* Simply target elements descending from .dark__mode */
+.dark__mode .header__title {
+  color: #fff;
+}
+
+.dark__mode .skill {
+  background-color: #333;
+}
+
+.dark__mode .github__logo {
+  filter: invert(1);
+}
+
 .toggle__btn--dark .btn__indicator {
   background-color: #333;
   transform: translateX(35px);
