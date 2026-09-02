@@ -81,7 +81,7 @@ const addProject = function (project) {
 const forkify = new Project(
   "forkify",
   "https://github.com/shristi-io/forkify-app",
-  "https://forkify-sibashis.netlify.app/"
+  "https://go-forkify.netlify.app/"
 );
 
 forkify.setDescription(
