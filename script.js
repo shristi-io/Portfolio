@@ -232,7 +232,7 @@ const projects = [
   registrationForm,
   library,
   zomato,
-  surveyFrom,
+  surveyForm,
 ];
 
 // Rendering the projects on the display
