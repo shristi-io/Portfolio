@@ -1,7 +1,6 @@
 "use strict";
 
 const htmlElement = document.querySelector("html");
-const bodyElement = document.querySelector("body");
 const projectContainer = document.querySelector(".projects__list");
 const toggleButton = document.querySelector(".toggle__btn");
 const toggleButtonIcon = document.querySelector(".btn__icon");
@@ -124,7 +123,7 @@ modernGpt.setDescription(
   "A modern and responsive website design about GPT-4. It is created using React JS and Tailwind CSS."
 );
 
-modernGpt.setImage("./img//projects/modern_gpt.png");
+modernGpt.setImage("./img/projects/modern_gpt.png");
 
 const notepedia = new Project(
   "Notepedia",
@@ -197,17 +196,17 @@ zomato.setDescription(
 
 zomato.setImage("./img/projects/zomato.png");
 
-const surveyFrom = new Project(
+const surveyForm = new Project(
   "Survey Form",
   "https://github.com/shristi-io/Survey-Form",
   "https://shristi-io.github.io/Survey-Form/"
 );
 
-surveyFrom.setDescription(
+surveyForm.setDescription(
   "An interactive survey form design. It is mobile responsive. Created using only HTML and CSS."
 );
 
-surveyFrom.setImage("./img/projects/survey.png");
+surveyForm.setImage("./img/projects/survey.png");
 
 const imageFinder = new Project(
   "Picstagram",
@@ -253,29 +252,12 @@ const githubLogos = document.querySelectorAll(".github__logo");
 // Adding light and dark mode
 
 const toggleMode = function () {
-  toggleButton.classList.toggle("toggle__btn--dark");
-  if (toggleButton.classList.contains("toggle__btn--dark")) {
-    toggleButtonIcon.setAttribute("src", "./img/icons/moon.svg");
-  } else {
-    toggleButtonIcon.setAttribute("src", "./img/icons/sun.svg");
-  }
+  const isDark = htmlElement.classList.toggle("dark__mode");
 
-  headerImage.classList.toggle("header__image--light-mode");
-  headerImage.classList.toggle("header__image--dark-mode");
-  headerTitle.classList.toggle("header__title--dark-mode");
-  htmlElement.classList.toggle("dark__mode");
-  // bodyElement.classList.toggle("dark__mode");
-  navBar.classList.toggle("dark__mode");
-  skills.forEach((skill) => {
-    skill.classList.toggle("skill--light-mode");
-    skill.classList.toggle("skill--dark-mode");
-  });
-  projectElements.forEach((project) => {
-    project.classList.toggle("dark__mode");
-  });
-  githubLogos.forEach((logo) => {
-    logo.classList.toggle("github__logo--dark-mode");
-  });
+  toggleButton.classList.toggle("toggle__btn--dark", isDark);
+  toggleButtonIcon.src = isDark ? "./img/icons/moon.svg" : "./img/icons/sun.svg";
 };
 
 toggleButton.addEventListener("click", toggleMode);
+
+
