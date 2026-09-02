@@ -209,9 +209,22 @@ surveyFrom.setDescription(
 
 surveyFrom.setImage("./img/projects/survey.png");
 
+const imageFinder = new Project(
+  "Picstagram",
+  "https://github.com/shristi-io/image-finder",
+  "https://picstagram-app.netlify.app/"
+);
+
+imageFinder.setDescription(
+  "A search engine to find royalty images. Responsive and easy to use."
+);
+
+imageFinder.setImage("./img/projects/imageFinder.png");
+
 const projects = [
   forkify,
   mapty,
+  imageFinder,
   bank,
   modernGpt,
   notepedia,
